@@ -1,0 +1,71 @@
+{
+  "name": "@uplora/nuxt-module",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.11.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uplora/nuxt-module.git"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.mts",
+      "import": "./dist/module.mjs"
+    }
+  },
+  "main": "./dist/module.mjs",
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/types.d.mts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "release": "pnpm run prepack && changelogen --release --push && pnpm publish --access public",
+    "prepack": "nuxt-module-build build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test:deps": "madge --circular --extensions ts ./src",
+    "typecheck": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit",
+    "prepare": "husky"
+  },
+  "peerDependencies": {
+    "tailwind-variants": "^1.0.0"
+  },
+  "dependencies": {
+    "@uplora/formats": "^0.1.0",
+    "@uplora/serializer": "^0.1.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.13.2",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@nuxt/devtools": "^2.5.0",
+    "@nuxt/module-builder": "^1.0.1",
+    "@nuxt/schema": "^3.17.5",
+    "changelogen": "^0.6.1",
+    "eslint": "^9.28.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "madge": "^8.0.0",
+    "nuxt": "^3.17.5",
+    "typescript": "^5.8.2",
+    "unbuild": "^3.5.0",
+    "vue-tsc": "^2.2.10"
+  },
+  "lint-staged": {
+    "*.ts": "pnpm run lint"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
