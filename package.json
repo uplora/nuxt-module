@@ -40,6 +40,7 @@
     "tailwind-variants": "^1.0.0"
   },
   "dependencies": {
+    "@nuxt/kit": "^3.17.5",
     "@uplora/formats": "^0.1.0",
     "@uplora/serializer": "^0.1.1"
   },
