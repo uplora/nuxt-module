@@ -15,6 +15,13 @@ export default antfu(
       'style/arrow-parens': ['error', 'always'],
       'curly': ['error', 'all'],
       'antfu/consistent-list-newline': 'off',
+      'vue/block-order': ['error', {
+        order: ['template', 'script', 'style'],
+      }],
+      'vue/max-attributes-per-line': ['error', {
+        singleline: 3,
+        multiline: 1,
+      }],
     },
   },
   {
