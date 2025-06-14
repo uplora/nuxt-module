@@ -1,0 +1,68 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "release",
+      "type": "npm",
+      "script": "release",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "icon": {
+        "id": "rocket",
+        "color": "terminal.ansiRed"
+      }
+    },
+    {
+      "label": "build",
+      "type": "npm",
+      "script": "prepack",
+      "group": "build",
+      "icon": {
+        "id": "package",
+        "color": "terminal.ansiYellow"
+      }
+    },
+    {
+      "label": "dev",
+      "type": "npm",
+      "script": "dev",
+      "group": "build",
+      "icon": {
+        "id": "play",
+        "color": "terminal.ansiBlue"
+      }
+    },
+    {
+      "label": "lint:fix",
+      "type": "npm",
+      "script": "lint:fix",
+      "group": "build",
+      "icon": {
+        "id": "wand",
+        "color": "terminal.ansiBlue"
+      }
+    },
+    {
+      "label": "typecheck",
+      "type": "npm",
+      "script": "typecheck",
+      "group": "test",
+      "icon": {
+        "id": "check",
+        "color": "terminal.ansiMagenta"
+      }
+    },
+    {
+      "label": "test",
+      "type": "npm",
+      "script": "test",
+      "group": "test",
+      "icon": {
+        "id": "check",
+        "color": "terminal.ansiMagenta"
+      }
+    }
+  ]
+}
