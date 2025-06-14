@@ -20,6 +20,9 @@ importers:
       tailwind-variants:
         specifier: ^1.0.0
         version: 1.0.0(tailwindcss@4.1.10)
+      tailwindcss:
+        specifier: ^4.1.0
+        version: 4.1.10
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^4.13.2

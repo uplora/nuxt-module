@@ -39,7 +39,8 @@
     "prepare": "husky"
   },
   "peerDependencies": {
-    "tailwind-variants": "^1.0.0"
+    "tailwind-variants": "^1.0.0",
+    "tailwindcss": "^4.1.0"
   },
   "dependencies": {
     "@nuxt/kit": "^3.17.5",
