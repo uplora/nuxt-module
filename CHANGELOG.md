@@ -1,6 +1,41 @@
 # Changelog
 
 
+## v0.1.0
+
+[compare changes](https://github.com/uplora/nuxt-module/compare/v0.0.1...v0.1.0)
+
+### 🚀 Enhancements
+
+- Add tv.ts file with ComponentVariants and ComponentSlots types ([49f7f34](https://github.com/uplora/nuxt-module/commit/49f7f34))
+- Add Image component with useImage composable and responsive sizes utility ([cfd8aa4](https://github.com/uplora/nuxt-module/commit/cfd8aa4))
+- Improve image types and srcset generation ([3ab651d](https://github.com/uplora/nuxt-module/commit/3ab651d))
+- Enhance image component with LQIP, preload, and error handling ([46953ed](https://github.com/uplora/nuxt-module/commit/46953ed))
+- Module imports ([8249041](https://github.com/uplora/nuxt-module/commit/8249041))
+
+### 💅 Refactors
+
+- Move script setup block to bottom of App.vue ([e1bc684](https://github.com/uplora/nuxt-module/commit/e1bc684))
+
+### 🏡 Chore
+
+- Update eslint configuration to enforce Vue block order and attribute limits ([2a12b71](https://github.com/uplora/nuxt-module/commit/2a12b71))
+- Add Vitest configuration and setup for testing ([8d7bd8c](https://github.com/uplora/nuxt-module/commit/8d7bd8c))
+- Add tailwindcss as peer dependency ([baa34d3](https://github.com/uplora/nuxt-module/commit/baa34d3))
+
+### ✅ Tests
+
+- Add stub for useImage composable and sizes utility functions ([4d4f829](https://github.com/uplora/nuxt-module/commit/4d4f829))
+
+### 🤖 CI
+
+- Add unit tests and remove playground dependencies installation ([d848664](https://github.com/uplora/nuxt-module/commit/d848664))
+- Install playground dependencies in CI ([a7fe7fd](https://github.com/uplora/nuxt-module/commit/a7fe7fd))
+
+### ❤️ Contributors
+
+- Hywax <a.hywax@gmail.com>
+
 ## v0.0.1
 
 
