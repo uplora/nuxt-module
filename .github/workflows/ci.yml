@@ -39,6 +39,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Install dependencies (playground)
+        run: cd ./playground && pnpm install && cd ..
+
       - name: Build prepare
         run: pnpm run dev:prepare
 
