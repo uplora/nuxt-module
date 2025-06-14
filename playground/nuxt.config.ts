@@ -3,7 +3,10 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '../src/module',
   ],
-  fluxor: {},
+  // uplora: {
+  //   // local instance
+  //   fluxorUrl: 'http://localhost:3100',
+  // },
   css: ['~/assets/css/main.css'],
   future: {
     compatibilityVersion: 4,

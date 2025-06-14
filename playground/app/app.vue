@@ -1,6 +1,6 @@
 <template>
   <UApp>
-    <div class="py-10 max-w-2xl mx-auto">
+    <div class="py-10 max-w-4xl w-full mx-auto">
       <div class="flex gap-6">
         <UForm :state="state" class="w-52 shrink-0 space-y-4">
           <UFormField label="ID" name="id">
@@ -20,16 +20,19 @@
           </UFormField>
         </UForm>
 
-        <div class="flex-1 w-full border-l border-default p-6">
+        <div class="flex-1 w-full border-l border-default p-6 overflow-auto">
           <UploraImage
             :id="state.id"
             :alt="state.alt"
             :lqip="lqipComputed"
             :formats="state.formats"
             :sizes="sizesComputed"
+            :ui="{ img: 'rounded-md' }"
+            @load="onLoad"
+            @error="onError"
           />
 
-          <pre class="mt-4 font-mono text-sm/6 border border-muted bg-muted rounded-md px-4 py-3 whitespace-pre-wrap overflow-x-auto"><code>&lt;UploraImage
+          <pre class="mt-6 font-mono text-sm/6 border border-muted bg-muted rounded-md px-4 py-3 whitespace-pre-wrap break-words"><code>&lt;UploraImage
   :id=&quot;{{ state.id }}&quot;
   :alt=&quot;{{ state.alt }}&quot;
   :lqip=&quot;{{ lqipComputed ?? 'undefined' }}&quot;
@@ -63,7 +66,7 @@ const sizes = [
 ]
 
 const state = reactive<State>({
-  id: '',
+  id: 'ytttsuxr3is94mbzjkvr1mgh',
   alt: 'Simple uplora image',
   lqip: false,
   formats: [],
@@ -73,7 +76,7 @@ const state = reactive<State>({
 const lqipComputed = computed(() => {
   if (state.lqip) {
     return {
-      image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEXM',
+      image: 'data:image/jpeg;base64,UklGRqAAAABXRUJQVlA4IJQAAAAQBQCdASogABYAPm0wlEckIqIhKAqogA2JZACxHoABExZ7s+cKGwGV5jV7VLJ8g5gAAP7jvV7Lt4vj9Edsi8pYVuGGtRb7WZ5n//i0WxeImX6a9bjryymCtQaMHK4Yz/rmmRYSyrViVS8TMciQNqoJ8qypBNfuySmF/HUseSll03LJ9xT9inr4f+VSjJx4QDcpHjAA',
       color: '#e0e0e0',
     }
   }
@@ -92,4 +95,20 @@ const sizesComputed = computed(() => {
 
   return undefined
 })
+
+const toast = useToast()
+
+function onLoad() {
+  toast.add({
+    title: 'Image load',
+  })
+}
+
+function onError(e: any) {
+  toast.add({
+    title: 'Image error',
+    description: e,
+    color: 'error',
+  })
+}
 </script>
