@@ -1,4 +1,5 @@
 import type { Format, Size, Source, Srcset } from '../types/formats'
+import { useRuntimeConfig } from '#imports'
 
 export interface UseImageOptions {
   id: string
@@ -13,9 +14,12 @@ export interface UseImageReturn {
   sources?: Source[]
 }
 
-export function useImage(_options: UseImageOptions): UseImageReturn {
+export function useImage(options: UseImageOptions): UseImageReturn {
+  const runtimeConfig = useRuntimeConfig()
+  const { fluxorUrl } = runtimeConfig.public.uplora as { fluxorUrl: string }
+
   return {
-    img: '',
+    img: `${fluxorUrl}/${options.id}`,
     original: '',
   }
 }
