@@ -50,7 +50,7 @@ const uploraImage = tv({
 })
 
 export interface UploraImageProps {
-  src: string
+  id: string
   alt: string
   formats?: Format[]
   sizes?: Size[]
@@ -59,7 +59,7 @@ export interface UploraImageProps {
   preload?: boolean | { fetchPriority: 'auto' | 'high' | 'low' }
   // csp
   nonce?: string
-  imgAttrs: ImgHTMLAttributes
+  imgAttrs?: ImgHTMLAttributes
   ui?: ComponentSlots<typeof uploraImage>
 }
 
@@ -79,7 +79,7 @@ const nuxtApp = useNuxtApp()
 const initialLoad = nuxtApp.isHydrating
 
 const image = computed(() => useImage({
-  id: props.src,
+  id: props.id,
   formats: props.formats,
   sizes: props.sizes,
 }))
