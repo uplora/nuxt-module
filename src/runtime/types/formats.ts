@@ -42,15 +42,22 @@ export interface LQIP {
    *
    * @example data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEXM
    */
-  preview: string
+  image: string
 
   /**
    * Hex color
    *
    * @example #e0e0e0
    */
-  colors: string
+  color: string
 }
+
+/**
+ * Image srcset
+ *
+ * @example https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/format/jpg 1x, https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/format/jpg 2x
+ */
+export type Srcset = string
 
 /**
  * Source
@@ -68,7 +75,7 @@ export interface Source {
    *
    * @example https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/format/jpg 1x, https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/format/jpg 2x
    */
-  srcset: string
+  srcset: Srcset
 
   /**
    * Image mime type

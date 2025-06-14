@@ -1,4 +1,4 @@
-import type { Format, Size, Source } from '../types/formats'
+import type { Format, Size, Source, Srcset } from '../types/formats'
 
 export interface UseImageOptions {
   id: string
@@ -9,7 +9,7 @@ export interface UseImageOptions {
 export interface UseImageReturn {
   img: string
   original: string
-  srcset?: string
+  srcset?: Srcset
   sources?: Source[]
 }
 

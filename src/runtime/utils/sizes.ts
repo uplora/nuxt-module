@@ -1,4 +1,4 @@
-import type { Size } from '../types/formats'
+import type { Size, Srcset } from '../types/formats'
 
 export interface GenerateSizesOptions {
   width: number
@@ -10,7 +10,7 @@ export interface GenerateSizesOptions {
 /**
  * Convert sizes to srcset
  */
-export function sizesToSrcset(sizes: Size[]): string {
+export function sizesToSrcset(sizes: Size[]): Srcset {
   return sizes
     .map((size) => `${size.width ?? ''}x${size.height ?? ''} ${size.descriptor}`)
     .join(', ')
