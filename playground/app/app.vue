@@ -29,15 +29,13 @@
             :sizes="sizesComputed"
           />
 
-          <pre class="mt-4 font-mono text-sm/6 border border-muted bg-muted rounded-md px-4 py-3 whitespace-pre-wrap overflow-x-auto"><code>
-&lt;UploraImage
+          <pre class="mt-4 font-mono text-sm/6 border border-muted bg-muted rounded-md px-4 py-3 whitespace-pre-wrap overflow-x-auto"><code>&lt;UploraImage
   :id=&quot;{{ state.id }}&quot;
   :alt=&quot;{{ state.alt }}&quot;
   :lqip=&quot;{{ lqipComputed ?? 'undefined' }}&quot;
   :formats=&quot;{{ state.formats }}&quot;
   :sizes=&quot;{{ sizesComputed ?? 'undefined' }}&quot;
-/&gt;
-          </code></pre>
+/&gt;</code></pre>
         </div>
       </div>
     </div>
