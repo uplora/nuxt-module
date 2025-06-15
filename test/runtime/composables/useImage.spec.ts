@@ -1,15 +1,18 @@
 import { describe, expect, it } from 'vitest'
 import { useImage } from '../../../src/runtime/composables/useImage'
 
-describe.todo('useImage()', () => {
+describe('useImage()', () => {
   it('should return the simple image', () => {
     const result = useImage({
       id: 'fgu1yd2ncj05iogcooz31u55',
     })
 
     expect(result).toEqual({
-      img: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55',
-      original: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55',
+      img: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55',
+      original: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55',
+      sources: [
+        { img: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55' },
+      ],
     })
   })
 
@@ -20,10 +23,10 @@ describe.todo('useImage()', () => {
     })
 
     expect(result).toEqual({
-      img: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/format/jpg',
-      original: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55',
+      img: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/format/jpg',
+      original: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55',
       sources: [
-        { img: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/format/jpg', type: 'image/jpeg' },
+        { img: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/format/jpg', type: 'image/jpeg' },
       ],
     })
   })
@@ -35,11 +38,11 @@ describe.todo('useImage()', () => {
     })
 
     expect(result).toEqual({
-      img: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/format/jpg',
-      original: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55',
+      img: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/format/jpg',
+      original: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55',
       sources: [
-        { img: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/format/jpg', type: 'image/jpeg' },
-        { img: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/format/webp', type: 'image/webp' },
+        { img: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/format/jpg', type: 'image/jpeg' },
+        { img: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/format/webp', type: 'image/webp' },
       ],
     })
   })
@@ -51,9 +54,11 @@ describe.todo('useImage()', () => {
     })
 
     expect(result).toEqual({
-      img: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x',
-      original: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55',
-      srcset: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x 1x',
+      img: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x',
+      original: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55',
+      sources: [
+        { img: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x' },
+      ],
     })
   })
 
@@ -64,9 +69,15 @@ describe.todo('useImage()', () => {
     })
 
     expect(result).toEqual({
-      img: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x',
-      original: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55',
-      srcset: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x 1x, https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/200x 2x',
+      img: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x',
+      original: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55',
+      srcset: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x 1x, https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/200x 2x',
+      sources: [
+        {
+          img: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x',
+          srcset: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x 1x, https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/200x 2x',
+        },
+      ],
     })
   })
 
@@ -78,11 +89,10 @@ describe.todo('useImage()', () => {
     })
 
     expect(result).toEqual({
-      img: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/jpg',
-      original: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55',
-      srcset: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/jpg 1x',
+      img: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/jpg',
+      original: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55',
       sources: [
-        { img: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/jpg', type: 'image/jpeg' },
+        { img: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/jpg', type: 'image/jpeg' },
       ],
     })
   })
@@ -95,18 +105,18 @@ describe.todo('useImage()', () => {
     })
 
     expect(result).toEqual({
-      img: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/jpg',
-      original: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55',
-      srcset: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/jpg 1x, https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/jpg 2x',
+      img: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/jpg',
+      original: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55',
+      srcset: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/jpg 1x, https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/200x/-/format/jpg 2x',
       sources: [
         {
-          img: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/jpg',
-          srcset: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/jpg 1x, https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/jpg 2x',
+          img: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/jpg',
+          srcset: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/jpg 1x, https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/200x/-/format/jpg 2x',
           type: 'image/jpeg',
         },
         {
-          img: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/200x/-/format/webp',
-          srcset: 'https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/200x/-/format/webp 1x, https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/200x/-/format/webp 2x',
+          img: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/webp',
+          srcset: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/webp 1x, https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/200x/-/format/webp 2x',
           type: 'image/webp',
         },
       ],
