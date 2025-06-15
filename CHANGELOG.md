@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.2.1
+
+[compare changes](https://github.com/uplora/nuxt-module/compare/v0.2.0...v0.2.1)
+
+### 🩹 Fixes
+
+- Add optional chaining for image sizes in useImage composable ([1c5b1c5](https://github.com/uplora/nuxt-module/commit/1c5b1c5))
+
+### 🏡 Chore
+
+- Update package.json and module.ts for improved type exports and runtime structure ([41b8fc3](https://github.com/uplora/nuxt-module/commit/41b8fc3))
+
+### ❤️ Contributors
+
+- Hywax <a.hywax@gmail.com>
+
 ## v0.2.0
 
 [compare changes](https://github.com/uplora/nuxt-module/compare/v0.1.0...v0.2.0)
