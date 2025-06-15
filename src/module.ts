@@ -2,6 +2,8 @@ import { addComponentsDir, addImports, createResolver, defineNuxtModule } from '
 import { defu } from 'defu'
 import { name, version } from '../package.json'
 
+export type * from './runtime/types'
+
 export interface ModuleOptions {
   fluxorUrl?: string
   prefix?: string
@@ -24,9 +26,7 @@ export default defineNuxtModule<ModuleOptions>({
       fluxorUrl: options.fluxorUrl,
     })
 
-    const runtimeDir = resolve('./runtime')
-    nuxt.options.alias['#uplora'] = runtimeDir
-    nuxt.options.build.transpile.push(runtimeDir)
+    nuxt.options.alias['#uplora'] = resolve('./runtime')
 
     addComponentsDir({
       path: resolve('./runtime/components'),
