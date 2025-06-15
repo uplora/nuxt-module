@@ -40,8 +40,8 @@ export function useImage(options: UseImageOptions): UseImageReturn {
       sources.push({
         img: resolve({
           resize: {
-            width: sizes[0].width,
-            height: sizes[0].height,
+            width: sizes[0]?.width,
+            height: sizes[0]?.height,
           },
           format,
         }),
@@ -55,8 +55,8 @@ export function useImage(options: UseImageOptions): UseImageReturn {
     sources.push({
       img: resolve({
         resize: {
-          width: sizes[0].width,
-          height: sizes[0].height,
+          width: sizes[0]?.width,
+          height: sizes[0]?.height,
         },
       }),
       ...(srcset ? { srcset } : {}),
@@ -68,8 +68,8 @@ export function useImage(options: UseImageOptions): UseImageReturn {
     original,
     ...(sources.length > 0
       ? {
-          img: sources[0].img,
-          srcset: sources[0].srcset,
+          img: sources[0]?.img,
+          srcset: sources[0]?.srcset,
         }
       : {}),
     sources,
