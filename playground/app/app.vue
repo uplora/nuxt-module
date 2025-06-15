@@ -27,7 +27,7 @@
             :lqip="lqipComputed"
             :formats="state.formats"
             :sizes="sizesComputed"
-            :ui="{ img: 'rounded-md' }"
+            :ui="{ root: 'rounded-md' }"
             @load="onLoad"
             @error="onError"
           />
