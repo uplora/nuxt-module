@@ -39,5 +39,10 @@ export default defineNuxtModule<ModuleOptions>({
       name: `use${options.prefix}Image`,
       from: resolve('runtime/composables/useImage'),
     })
+
+    addImports({
+      name: 'generateImageSizes',
+      from: resolve('runtime/utils/sizes'),
+    })
   },
 })
