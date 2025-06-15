@@ -42,10 +42,10 @@ import { useImage } from '../composables/useImage'
 
 const uploraImage = tv({
   slots: {
-    root: 'relative',
-    lqip: 'bg-cover bg-no-repeat bg-center',
-    picture: '',
-    img: '',
+    root: 'relative grid grid-cols-[100%] grid-rows-[100%] overflow-hidden',
+    lqip: 'bg-cover bg-no-repeat bg-center col-[1] row-[1]',
+    picture: 'aspect-3/2 col-[1] row-[1]',
+    img: 'w-full h-full block object-cover',
   },
 })
 
