@@ -1,6 +1,39 @@
 # Changelog
 
 
+## v0.2.0
+
+[compare changes](https://github.com/uplora/nuxt-module/compare/v0.1.0...v0.2.0)
+
+### 🚀 Enhancements
+
+- Implement form for image properties and display component ([34df667](https://github.com/uplora/nuxt-module/commit/34df667))
+
+### 🩹 Fixes
+
+- Update UploraImageProps to use id instead of src and make imgAttrs optional ([8193d70](https://github.com/uplora/nuxt-module/commit/8193d70))
+- Correct code formatting for UploraImage component in app.vue ([ec7e4fe](https://github.com/uplora/nuxt-module/commit/ec7e4fe))
+- Update background image syntax and use runtime config for image URL in useImage composable ([ceadfd4](https://github.com/uplora/nuxt-module/commit/ceadfd4))
+- Adjust layout and enhance UploraImage component with load/error handling ([bb69276](https://github.com/uplora/nuxt-module/commit/bb69276))
+- Update image URLs in useImage tests to use fluxor domain ([6938777](https://github.com/uplora/nuxt-module/commit/6938777))
+- Update image formats and state properties in app.vue ([16ed5c9](https://github.com/uplora/nuxt-module/commit/16ed5c9))
+- Update UI property in UploraImage component for improved styling ([a6c6d9f](https://github.com/uplora/nuxt-module/commit/a6c6d9f))
+
+### 💅 Refactors
+
+- Image handling in UploraImage component and improve source management ([7ce7993](https://github.com/uplora/nuxt-module/commit/7ce7993))
+- Enhance layout and styling for Image component in UploraImage ([c4aa568](https://github.com/uplora/nuxt-module/commit/c4aa568))
+
+### 🏡 Chore
+
+- Update build configuration to disable warnings ([f1b9afc](https://github.com/uplora/nuxt-module/commit/f1b9afc))
+- Add VSCode configuration files for extensions, settings, and tasks ([13c614a](https://github.com/uplora/nuxt-module/commit/13c614a))
+- Update @uplora/serializer dependency to version 0.1.3 ([10a384a](https://github.com/uplora/nuxt-module/commit/10a384a))
+
+### ❤️ Contributors
+
+- Hywax <a.hywax@gmail.com>
+
 ## v0.1.0
 
 [compare changes](https://github.com/uplora/nuxt-module/compare/v0.0.1...v0.1.0)
