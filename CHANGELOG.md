@@ -1,6 +1,31 @@
 # Changelog
 
 
+## v0.3.0
+
+[compare changes](https://github.com/uplora/nuxt-module/compare/v0.2.1...v0.3.0)
+
+### 🚀 Enhancements
+
+- Change div to figure in Image component for semantic HTML ([6d8302a](https://github.com/uplora/nuxt-module/commit/6d8302a))
+- Add generateImageSizes utility and update module imports ([e29b3f5](https://github.com/uplora/nuxt-module/commit/e29b3f5))
+
+### 🩹 Fixes
+
+- Update lqip image and color in app.vue for improved visual consistency ([8acad78](https://github.com/uplora/nuxt-module/commit/8acad78))
+
+### ✅ Tests
+
+- For Image component rendering with various props and formats ([8923032](https://github.com/uplora/nuxt-module/commit/8923032))
+
+### 🤖 CI
+
+- Comment out circular dependencies test ([74f633c](https://github.com/uplora/nuxt-module/commit/74f633c))
+
+### ❤️ Contributors
+
+- Hywax <a.hywax@gmail.com>
+
 ## v0.2.1
 
 [compare changes](https://github.com/uplora/nuxt-module/compare/v0.2.0...v0.2.1)
