@@ -1,5 +1,5 @@
 <template>
-  <div :class="ui.root({ class: props.ui?.root })">
+  <figure :class="ui.root({ class: props.ui?.root })">
     <div
       v-if="lqip"
       :class="ui.lqip({ class: props.ui?.lqip })"
@@ -28,7 +28,7 @@
         :class="ui.img({ class: props.ui?.img })"
       >
     </picture>
-  </div>
+  </figure>
 </template>
 
 <script lang="ts">
