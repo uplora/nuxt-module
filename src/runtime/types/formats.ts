@@ -75,12 +75,12 @@ export interface Source {
    *
    * @example https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/format/jpg 1x, https://uplora.ru/fgu1yd2ncj05iogcooz31u55/-/format/jpg 2x
    */
-  srcset: Srcset
+  srcset?: Srcset
 
   /**
    * Image mime type
    *
    * @example image/jpeg
    */
-  type: ImageMimeType
+  type?: ImageMimeType
 }

@@ -9,9 +9,9 @@
       }"
     />
     <picture :class="ui.picture({ class: props.ui?.picture })">
-      <template v-if="image.sources && image.sources.length > 1">
+      <template v-if="sources.length">
         <source
-          v-for="(source, key) in image.sources"
+          v-for="(source, key) in sources"
           :key="key"
           :srcset="source.srcset"
           :type="source.type"
@@ -19,7 +19,7 @@
       </template>
 
       <img
-        ref="image"
+        ref="imageRef"
         v-bind="imageAttrs"
         :src="image.img"
         :srcset="image?.srcset"
@@ -84,6 +84,14 @@ const image = computed(() => useImage({
   sizes: props.sizes,
 }))
 
+const sources = computed(() => {
+  if (image.value.sources.length > 1) {
+    return image.value.sources.slice(1)
+  }
+
+  return []
+})
+
 if (import.meta.server && props.preload) {
   useHead({ link: () => {
     if (!image.value.img) {
@@ -104,7 +112,7 @@ if (import.meta.server && props.preload) {
   } })
 }
 
-const imageRef = useTemplateRef('image')
+const imageRef = useTemplateRef('imageRef')
 const imageAttrs = computed(() => ({
   ...(props.imgAttrs || {}),
   ...(import.meta.server ? { onerror: 'this.setAttribute(\'data-error\', 1)' } : {}),
