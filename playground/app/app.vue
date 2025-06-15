@@ -50,13 +50,14 @@ interface State {
   id: string
   alt: string
   lqip: boolean
-  formats: ('jpg' | 'webp')[]
+  formats: ('jpg' | 'webp' | 'avif')[]
   sizes: 'none' | 'one' | 'many'
 }
 
 const formats = [
   { label: 'Jpg', value: 'jpg' },
   { label: 'WebP', value: 'webp' },
+  { label: 'Avif', value: 'avif' },
 ]
 
 const sizes = [
@@ -68,9 +69,9 @@ const sizes = [
 const state = reactive<State>({
   id: 'ytttsuxr3is94mbzjkvr1mgh',
   alt: 'Simple uplora image',
-  lqip: false,
-  formats: [],
-  sizes: 'none',
+  lqip: true,
+  formats: ['jpg', 'webp'],
+  sizes: 'many',
 })
 
 const lqipComputed = computed(() => {
