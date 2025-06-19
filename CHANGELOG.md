@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.3.1
+
+[compare changes](https://github.com/uplora/nuxt-module/compare/v0.3.0...v0.3.1)
+
+### 💅 Refactors
+
+- Update LQIP handling ([72dc7b6](https://github.com/uplora/nuxt-module/commit/72dc7b6))
+
+### ❤️ Contributors
+
+- Hywax <a.hywax@gmail.com>
+
 ## v0.3.0
 
 [compare changes](https://github.com/uplora/nuxt-module/compare/v0.2.1...v0.3.0)
