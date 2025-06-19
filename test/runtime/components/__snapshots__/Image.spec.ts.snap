@@ -38,7 +38,7 @@ exports[`image > render with loading correctly 1`] = `
 
 exports[`image > render with lqip correctly 1`] = `
 "<figure class="relative grid grid-cols-[100%] grid-rows-[100%] overflow-hidden">
-  <div class="bg-cover bg-no-repeat bg-center col-[1] row-[1]" style="background-image: url(&quot;https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/jpg&quot;); background-color: #000000;"></div>
+  <div class="bg-cover bg-no-repeat bg-center col-[1] row-[1]" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAA&quot;);"></div>
   <picture class="aspect-3/2 col-[1] row-[1]">
     <!--v-if--><img src="https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55" alt="test" loading="lazy" class="w-full h-full block object-cover">
   </picture>

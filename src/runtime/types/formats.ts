@@ -34,23 +34,11 @@ export interface Size {
 }
 
 /**
- * LQIP
+ * LQIP base64 encoded image
+ *
+ * @example data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAA
  */
-export interface LQIP {
-  /**
-   * Base64 encoded image
-   *
-   * @example data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEXM
-   */
-  image: string
-
-  /**
-   * Hex color
-   *
-   * @example #e0e0e0
-   */
-  color: string
-}
+export type LQIP = string
 
 /**
  * Image srcset

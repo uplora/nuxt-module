@@ -4,8 +4,7 @@
       v-if="lqip"
       :class="ui.lqip({ class: props.ui?.lqip })"
       :style="{
-        backgroundImage: `url(${lqip.image})`,
-        backgroundColor: lqip.color,
+        backgroundImage: `url(${lqip})`,
       }"
     />
     <picture :class="ui.picture({ class: props.ui?.picture })">

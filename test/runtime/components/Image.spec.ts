@@ -1,4 +1,4 @@
-import type { Format, LQIP, Size } from '../../../src/runtime/types/formats'
+import type { Format, Size } from '../../../src/runtime/types/formats'
 import { describe, expect, it } from 'vitest'
 import Image, { type UploraImageProps } from '../../../src/runtime/components/Image.vue'
 import ComponentRender from '../../component-render'
@@ -8,7 +8,7 @@ describe('image', () => {
     ['simple', { props: { id: 'fgu1yd2ncj05iogcooz31u55', alt: 'test' } }],
     ['with formats', { props: { id: 'fgu1yd2ncj05iogcooz31u55', alt: 'test', formats: ['jpg', 'webp'] as Format[] } }],
     ['with sizes', { props: { id: 'fgu1yd2ncj05iogcooz31u55', alt: 'test', sizes: [{ width: 100, descriptor: '1x' }] as Size[] } }],
-    ['with lqip', { props: { id: 'fgu1yd2ncj05iogcooz31u55', alt: 'test', lqip: { image: 'https://fluxor.uplora.ru/fgu1yd2ncj05iogcooz31u55/-/resize/100x/-/format/jpg', color: '#000000' } as LQIP } }],
+    ['with lqip', { props: { id: 'fgu1yd2ncj05iogcooz31u55', alt: 'test', lqip: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAA' } }],
     ['with loading', { props: { id: 'fgu1yd2ncj05iogcooz31u55', alt: 'test', loading: 'eager' as const } }],
     ['with preload', { props: { id: 'fgu1yd2ncj05iogcooz31u55', alt: 'test', preload: true } }],
     ['with nonce', { props: { id: 'fgu1yd2ncj05iogcooz31u55', alt: 'test', nonce: '1234567890' } }],

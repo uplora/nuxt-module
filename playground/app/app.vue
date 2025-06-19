@@ -15,7 +15,7 @@
           <UFormField label="Formats" name="formats">
             <UCheckboxGroup v-model="state.formats" :items="formats" />
           </UFormField>
-          <UFormField label="Formats" name="formats">
+          <UFormField label="Sizes" name="sizes">
             <URadioGroup v-model="state.sizes" :items="sizes" />
           </UFormField>
         </UForm>
@@ -25,7 +25,7 @@
             :id="state.id"
             :alt="state.alt"
             :lqip="lqipComputed"
-            :formats="state.formats"
+            :formats="state.formats.length > 0 ? state.formats : undefined"
             :sizes="sizesComputed"
             :ui="{ root: 'rounded-md' }"
             @load="onLoad"
@@ -76,10 +76,7 @@ const state = reactive<State>({
 
 const lqipComputed = computed(() => {
   if (state.lqip) {
-    return {
-      color: '#ab7c5d',
-      image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAclBMVEUiKCLCu7LSo4HftJOwr6q5ta9LOi0pKiQyLiY+MynmvZvZrIlYQTLVx7qlpqLLwbfq07zrxqbuz7JkSTfKmXe3hmbfz75xUTyfc1WrfF3BkG6TaU58WEKcnJeHYEffwafQu6fhybLFq5Wwo5WSko2FiYXlL2BpAAAACXBIWXMAAAsTAAALEwEAmpwYAAADAklEQVR4nJ2VbW+bQAzH/z4oJC2iaUqkbVGaStu+/1dqlFfV+gRqk0B4mGwfcNAs0uqrjjP1z76zzYV+g6UBkANIRdthKJe7S35cq+afIajhoS8YSpXyHUAIa0868WBsJwyA9BpGCVW7nZAQraLqjp2lSOELkLsh1LzsEN4IseMdOFJqGBBigQUT4rEse4KVEk4k+sX2AYA/orb+Y2TRuw7EmXNowM8VwGa9YcDaI4t4ESF6j4zoJeCTUL7YS6ItEIsWmQiWqnnzMTKU8PlQxto3d9tVucQaa1brGnV/mLquayCO+VhLEP3ULW5XavMKazzdTxXYT/fyNMDNZr1Zb+inLUtt2PT59jl5Sp46+1YsdSNz8yCAOm/mlDwlmF6NCEynCRLMtLTmnh+Pi+1KcyiH+wCKoAgKBAUQFJyiK/H8Mid4NHuYPT6X2WorqTI1l2ZfVuDBf7yoqviVAzc8efR2/wh/mWbI8itORTpJJ/ms6DpP5WAm0tvgjfFOgQOAEFggi7PZm7ZZn2cDXKfXb1o0Sl6UaSGE0h8z29a1kUpK7WwDUwJm2kAC6eT2f9teufwj4dmN5FLcRNJL3ScC5PQDKM5QveTtRAtc8Jqxdoculoe9f3lMGAF66hTWWx840aDvPJefOWmZw0RIkUnba/Rt8LGfCAe3oecvc9BSWgLnQCtzmQPQnQJ2phOYFe1OHC/8WnsGXk96TDYMkpIqdJTH0T9ah4bJCp5gDUB8pZRQMxbfXsagW/ilrNWfRKxGOx12DUU29y5ohpgVr/IsorotswNqPHtEl6HATUcLDuL1UmuUqetJeRd0U3a8kGRQV+AxZ9PkSOlLxfTHghOjZ0Ml9eObRUQDWvkIuT9Jug2jhGrE7rp2pAhAofP1DcnujHyjya2mIki77slPmJNmavPzGRtdGO7rMB9hrnHvov1FhwdUYVXBz6vKz52cDs930l+Y8xhfLAwO2cYiYms5XfwjAsup6G240QFbMSfe5XwFhWBQx/9JeHaPZzEdX+O/JH8BtUM+KttnGNQAAAAASUVORK5CYII=',
-    }
+    return 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAclBMVEUiKCLCu7LSo4HftJOwr6q5ta9LOi0pKiQyLiY+MynmvZvZrIlYQTLVx7qlpqLLwbfq07zrxqbuz7JkSTfKmXe3hmbfz75xUTyfc1WrfF3BkG6TaU58WEKcnJeHYEffwafQu6fhybLFq5Wwo5WSko2FiYXlL2BpAAAACXBIWXMAAAsTAAALEwEAmpwYAAADAklEQVR4nJ2VbW+bQAzH/z4oJC2iaUqkbVGaStu+/1dqlFfV+gRqk0B4mGwfcNAs0uqrjjP1z76zzYV+g6UBkANIRdthKJe7S35cq+afIajhoS8YSpXyHUAIa0868WBsJwyA9BpGCVW7nZAQraLqjp2lSOELkLsh1LzsEN4IseMdOFJqGBBigQUT4rEse4KVEk4k+sX2AYA/orb+Y2TRuw7EmXNowM8VwGa9YcDaI4t4ESF6j4zoJeCTUL7YS6ItEIsWmQiWqnnzMTKU8PlQxto3d9tVucQaa1brGnV/mLquayCO+VhLEP3ULW5XavMKazzdTxXYT/fyNMDNZr1Zb+inLUtt2PT59jl5Sp46+1YsdSNz8yCAOm/mlDwlmF6NCEynCRLMtLTmnh+Pi+1KcyiH+wCKoAgKBAUQFJyiK/H8Mid4NHuYPT6X2WorqTI1l2ZfVuDBf7yoqviVAzc8efR2/wh/mWbI8itORTpJJ/ms6DpP5WAm0tvgjfFOgQOAEFggi7PZm7ZZn2cDXKfXb1o0Sl6UaSGE0h8z29a1kUpK7WwDUwJm2kAC6eT2f9teufwj4dmN5FLcRNJL3ScC5PQDKM5QveTtRAtc8Jqxdoculoe9f3lMGAF66hTWWx840aDvPJefOWmZw0RIkUnba/Rt8LGfCAe3oecvc9BSWgLnQCtzmQPQnQJ2phOYFe1OHC/8WnsGXk96TDYMkpIqdJTH0T9ah4bJCp5gDUB8pZRQMxbfXsagW/ilrNWfRKxGOx12DUU29y5ohpgVr/IsorotswNqPHtEl6HATUcLDuL1UmuUqetJeRd0U3a8kGRQV+AxZ9PkSOlLxfTHghOjZ0Ml9eObRUQDWvkIuT9Jug2jhGrE7rp2pAhAofP1DcnujHyjya2mIki77slPmJNmavPzGRtdGO7rMB9hrnHvov1FhwdUYVXBz6vKz52cDs930l+Y8xhfLAwO2cYiYms5XfwjAsup6G240QFbMSfe5XwFhWBQx/9JeHaPZzEdX+O/JH8BtUM+KttnGNQAAAAASUVORK5CYII='
   }
 
   return undefined
